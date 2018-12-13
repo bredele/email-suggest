@@ -1,11 +1,14 @@
 {
   "name": "email-suggest",
   "version": "1.0.0",
-  "description": "Suggest enail address based on list of popular email domains",
+  "description": "Suggest email address based on list of popular email domains",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js"
   },
+  "engines": {
+   "node": ">= 8.9.4"
+ },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bredele/email-suggest.git"

@@ -13,21 +13,25 @@ Suggest email address based on the [most popular email domain](https://github.co
 ```js
 const suggest = require('email-suggest')
 
-email('hello@gm')
+suggest('hello@gm')
 // => hello@gmail.com
 
-email('hello@go')
-// => hello@google.com
+suggest('world@go')
+// => world@google.com
 
-email('hello@ao')
+suggest('hello@ao')
 // => hello@aol.com
 
 
 // get list of all suggest domains
-email('hello@ao', (address, domains) => {
+suggest('hello@ao', (address, domains) => {
   console.log(domains)
   // => ['aol.com', 'aol.it']
 })
+
+// no suggestion
+suggest('hello@zzp')
+// undefined
 ```
 
 
