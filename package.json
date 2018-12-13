@@ -1,0 +1,27 @@
+{
+  "name": "email-suggest",
+  "version": "1.0.0",
+  "description": "Suggest enail address based on list of popular email domains",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bredele/email-suggest.git"
+  },
+  "keywords": [
+    "email",
+    "domain",
+    "suggest"
+  ],
+  "author": "Olivier Wietrich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bredele/email-suggest/issues"
+  },
+  "homepage": "https://github.com/bredele/email-suggest#readme",
+  "devDependencies": {
+    "tape": "^4.9.1"
+  }
+}
