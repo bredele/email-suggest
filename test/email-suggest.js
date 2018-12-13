@@ -17,7 +17,7 @@ test('should suggest email address if contains a @ charater', assert => {
 
 test('should suggest first most popular domain based on given address', assert => {
   assert.plan(1)
-  assert.equal(suggest('hello@hot'), 'hello@hotmail.be')
+  assert.equal(suggest('hello@hot'), 'hello@hotmail.com')
 })
 
 test('should not return anything if no domain found', assert => {
@@ -28,18 +28,7 @@ test('should not return anything if no domain found', assert => {
 test('should return list of suggested domains if callback passed', assert => {
   assert.plan(2)
   const result = suggest('hello@g', (address, domains) => {
-    assert.deepEqual(domains, [
-      'games.com',
-      'globo.com',
-      'globomail.com',
-      'gmail.com',
-      'gmx.com',
-      'gmx.de',
-      'gmx.fr',
-      'gmx.net',
-      'google.com',
-      'googlemail.com'
-    ])
+    assert.deepEqual(domains, ['gmail.com', 'games.com', 'globo.com', 'globomail.com', 'gmx.com', 'gmx.de', 'gmx.fr', 'gmx.net', 'google.com', 'googlemail.com'])
   })
   assert.equal(result == null, true)
 })
