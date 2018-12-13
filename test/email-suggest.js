@@ -52,3 +52,10 @@ test('should map suggested address with given callbacl', assert => {
     'hello@gmail.com'
   )
 })
+
+test('should pass local email part to mapping function', assert => {
+  assert.plan(1)
+  suggest('hello@g', (address, domains, left) => {
+    assert.equal(left, 'hello')
+  })
+})
