@@ -60,3 +60,11 @@ test('should pass local email part to mapping function', assert => {
     assert.equal(left, 'hello')
   })
 })
+
+test('should pass a list of suggested domains', assert => {
+  assert.plan(1)
+  assert.equal(
+    suggest('hello@g', undefined, ['klara.com', 'olivier.com', 'gabriel.com']),
+    'hello@gabriel.com'
+  )
+})

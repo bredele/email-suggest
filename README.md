@@ -32,6 +32,10 @@ suggest('hello@ao', (address, domains) => {
 // no suggestion
 suggest('hello@zzp')
 // undefined
+
+// custom list of suggestions
+suggest('hello@w', undefined, ['world.com', 'olivier.com'])
+// => hello@world.com
 ```
 
 
