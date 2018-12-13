@@ -25,5 +25,5 @@ const map = (str, domains) => email(str, domains[0])
 
 module.exports = (address, cb = map, suggested = popular) => {
   const [left, right] = address.split('@')
-  if (right) return cb(address, pick(right, suggested), left)
+  if (left && right) return cb(address, pick(right, suggested), left)
 }
