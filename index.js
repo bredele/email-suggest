@@ -10,6 +10,6 @@ module.exports = (address) => {
   const [left, right] = address.split('@')
   if (right != null) {
     const domains = pick(right, popular)
-    if (domains.length < 2) return email(address, domains[0])
+    return email(address, domains[0])
   }
 }
