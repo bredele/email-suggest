@@ -23,5 +23,10 @@
   "homepage": "https://github.com/bredele/email-suggest#readme",
   "devDependencies": {
     "tape": "^4.9.1"
+  },
+  "dependencies": {
+    "array-prefix": "^1.0.0",
+    "email-domain": "^1.0.0",
+    "email-domain-popular": "^1.0.0"
   }
 }
