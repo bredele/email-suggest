@@ -44,7 +44,7 @@ test('should return list of suggested domains if callback passed', assert => {
   assert.equal(result == null, true)
 })
 
-test('should map suggested address with given callbacl', assert => {
+test('should map suggested address with given callback', assert => {
   assert.plan(1)
   assert.equal(
     suggest('hello@g', (address, domains) => {
