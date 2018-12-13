@@ -25,7 +25,8 @@ email('hello@ao')
 
 // get list of all suggest domains
 email('hello@ao', (address, domains) => {
-
+  console.log(domains)
+  // => ['aol.com', 'aol.it']
 })
 ```
 
