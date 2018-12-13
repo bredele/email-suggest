@@ -26,8 +26,8 @@ test('should not return anything if no domain found', assert => {
 })
 
 test('should return list of suggested domains if callback passed', assert => {
-  assert.plan(1)
-  suggest('hello@g', (address, domains) => {
+  assert.plan(2)
+  const result = suggest('hello@g', (address, domains) => {
     assert.deepEqual(domains, [
       'games.com',
       'globo.com',
@@ -41,6 +41,7 @@ test('should return list of suggested domains if callback passed', assert => {
       'googlemail.com'
     ])
   })
+  assert.equal(result == null, true)
 })
 
 test('should map suggested address with given callbacl', assert => {
