@@ -19,3 +19,9 @@ test('should suggest first most popular domain based on given address', assert =
   assert.plan(1)
   assert.equal(suggest('hello@hot'), 'hello@hotmail.be')
 })
+
+
+test('should not return anything if no domain found', assert => {
+  assert.plan(1)
+  assert.equal(suggest('hello@zz') == null, true)
+})
