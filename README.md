@@ -36,6 +36,13 @@ suggest('hello@zzp')
 // custom list of suggestions
 suggest('hello@w', undefined, ['world.com', 'olivier.com'])
 // => hello@world.com
+
+
+// custom list of suggestions
+suggest('hello@g', undefined, ['world.com', 'olivier.com'], true)
+// => hello@gmail.com
+suggest('hello@console.warn();', undefined, ['world.com', 'olivier.com'], true)
+// => hello@world.com
 ```
 
 
