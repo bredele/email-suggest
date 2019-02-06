@@ -67,3 +67,15 @@ test('should pass a list of suggested domains', assert => {
     'hello@gabriel.com'
   )
 })
+
+test('should merge list of suggested domains', assert => {
+  assert.plan(2)
+  assert.equal(
+    suggest('hello@g', undefined, ['klara.com', 'olivier.com', 'gabriel.com'], true),
+    'hello@gabriel.com'
+  )
+  assert.equal(
+    suggest('hello@li', undefined, ['klara.com', 'olivier.com', 'gabriel.com'], true),
+    'hello@live.com'
+  )
+})
